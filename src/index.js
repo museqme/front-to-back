@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+// *************** 'root' is located in the index.html div *******************
 ReactDOM.render(
   <App />,
-  document.getElementById('root')); // root is located in the index.html div
+  document.getElementById('root'));
 registerServiceWorker();

@@ -1,12 +1,12 @@
- //Main React render, placeholder for all
+// * Main React render, placeholder for all other components inside of render *
 import React, { Component } from 'react';
 import  Projects from './Components/Projects';
 import './App.css';
 
+//***************** New State(page) with Data ***************************
 class App extends Component {
-  //***************** New State(page) with Data ***************************
-  constructor() {
-    super();
+  constructor() { // *** holds like values + key value pairs ** //
+    super(); // *** Why super()? *** it's just syntex. *****
     this.state = {
       projects:[
         {
@@ -23,18 +23,21 @@ class App extends Component {
         },
       ]
     }
-    //************************************************************************
   }
-   //****************** Passing ^projects State into a projects property******
+//**************************************************************************
+
+//****************** Passing ^projects State into a projects property*******
+//****** class attribute not allowed in JSX (className or for 'html')*******
   render() {
     return (
       <div className="App">
-      My App
-      <Projects projects={this.state.projects}/>
+        My App
+        <Projects projects={this.state.projects}/>
       </div>
     );
   }
-  //**************************************************************************
 }
+//***************** HOW DOES CLASSNAME="APP" INTERACT WITH CLASS APP^ ?*****
+//**************************************************************************
 
 export default App;
