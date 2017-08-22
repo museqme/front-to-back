@@ -1,3 +1,4 @@
+//Renders App.js to index.html in the <div id="root"> ****
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
