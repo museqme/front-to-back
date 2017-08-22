@@ -33,13 +33,19 @@ componentWillMount() {
   });
 }
 
+handleAddProject(project){
+  let projects = this.state.projects;
+  projects.push(project);
+  this.setState({projects:projects})
+}
 //****************** Passing ^projects State into a projects property*******
 //****** class attribute not allowed in JSX (className or for 'html')*******
   render() {
     return (
       <div className="App">
-        <AddProject />
+        <AddProject addProject={this.handleAddProject.bind(this)} />
         <Projects projects={this.state.projects}/>
+
       </div>
     );
   }
