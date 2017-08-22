@@ -17,7 +17,7 @@ class Projects extends Component {
         )
       });
     }
-    //**** import ^ ProjectItem.js ****
+    //**** import ^^ ProjectItem.js ****
     //**** each project is is assigned to the ProjectItem variable^*****
 //*****************************************************************************
 

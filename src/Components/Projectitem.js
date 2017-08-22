@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-//********************Return a list of all elements with a property of project and key of title and category. ***********************************************
+//******************* Return a list of all elements with a property of project and key of title and category. ***********************************************
 class ProjectItem extends Component {
   render() {
     return (
