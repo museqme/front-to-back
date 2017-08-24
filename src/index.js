@@ -5,7 +5,9 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 // *************** 'root' is located in the index.html div *******************
+// *************** <App/> document will render to 'root' *********************
+
 ReactDOM.render(
-  <App />,
+  <App/>,
   document.getElementById('root'));
 registerServiceWorker();

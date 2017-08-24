@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import ProjectItem from './Projectitem';
 
 class Projects extends Component {
+  deleteProject(id){
+    this.props.onDelete(id);
+  }
   render() {
 //******  Create Variable to hold list of Projects in Projectitem.js*******
     let projectItems;
@@ -11,9 +14,8 @@ class Projects extends Component {
 //**if statement that maps & returns projectItems Component in Projectitem.js*
     if(this.props.projects){
       projectItems = this.props.projects.map(project => {
-        // console.log(project)
         return (
-          <ProjectItem key={project.title} project={project} />
+          <ProjectItem onDelete={this.deleteProject.bind(this)} key={project.title} project={project} />
         )
       });
     }
@@ -24,6 +26,7 @@ class Projects extends Component {
 //************Returns ^projectItems variable as a div element******************
     return (
       <div className="Projects">
+      <h3>Lastest Project</h3>
       {projectItems}
       </div>
     );
